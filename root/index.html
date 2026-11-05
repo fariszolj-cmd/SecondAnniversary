@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Two Years of Us</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F1F1EF;--surface:#F9F9F8;--fg:#241A1D;--muted:#66595D;--line:#D8D3D4;--accent:#8A1C32;--soft:rgba(138,28,50,.1);--on:#FBFAF9;--display:'Gloock',Georgia,'Times New Roman',serif;--body:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#160E11;--surface:#20151A;--fg:#F1ECEC;--muted:#A8999D;--line:#3A2A30;--accent:#E4637B;--soft:rgba(228,99,123,.14);--on:#1A0F13;color-scheme:dark}}
+:root[data-theme=dark]{--bg:#160E11;--surface:#20151A;--fg:#F1ECEC;--muted:#A8999D;--line:#3A2A30;--accent:#E4637B;--soft:rgba(228,99,123,.14);--on:#1A0F13;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*,::before,::after{box-sizing:border-box}[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--fg);font:1.0625rem/1.6 var(--body);padding:clamp(2rem,6vw,4.5rem) max(16px,env(safe-area-inset-right,0px)) clamp(2rem,6vw,4.5rem) max(16px,env(safe-area-inset-left,0px))}
+.wrap{max-width:66rem;margin:0 auto;display:flex;flex-direction:column;gap:clamp(3.5rem,9vw,6.5rem)}
+h1,h2,h3{font:400 1em/1.08 var(--display);margin:0;text-wrap:balance}h1{font-size:clamp(3rem,8.5vw,6rem);letter-spacing:-.01em}h2{font-size:clamp(1.9rem,4.4vw,2.75rem)}h3{font-size:1.6rem}p{margin:0}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(1.5rem,5vw,4rem);align-items:center}
+.ht{display:flex;flex-direction:column;gap:1.25rem;min-width:0}.lead{font-size:1.2rem;max-width:34rem;color:var(--muted)}
+.numeral{width:100%;max-width:21rem;height:auto;justify-self:center}
+.numeral text{font:360px var(--display);fill:var(--soft);stroke:var(--accent);stroke-width:2.5;stroke-dasharray:9 7;stroke-linecap:round;stroke-linejoin:round}
+.sh{display:flex;flex-direction:column;gap:.6rem;min-width:0}.sh p{color:var(--muted);max-width:36rem}
+.gh{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1rem 2rem;margin-bottom:1.75rem}
+.filters{display:flex;gap:1.25rem}.filters button{font:600 .9rem var(--body);color:var(--muted);background:none;border:0;border-bottom:2px dashed transparent;padding:.35rem 0;cursor:pointer}
+.filters span{font-variant-numeric:tabular-nums;font-weight:500;margin-left:.2rem}.filters button:hover{color:var(--fg)}.filters [aria-pressed=true]{color:var(--fg);border-bottom-color:var(--accent)}
+.gallery{--row:18rem;display:flex;flex-wrap:wrap;gap:1.25rem}.gallery::after{content:"";flex-grow:999999}
+.tile{margin:0;flex:var(--r) 1 calc(var(--r)*var(--row));min-width:0;display:flex;flex-direction:column;gap:.55rem}
+.media{position:relative;display:block;width:100%;aspect-ratio:var(--r);padding:0;border:0;border-radius:2px;background:var(--soft);overflow:hidden;cursor:zoom-in}
+.media img,.media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}.media:hover img,.media:hover video{transform:scale(1.03)}
+.media::after{content:"";position:absolute;inset:8px;border:2px dashed rgba(255,255,255,.9);border-radius:2px;pointer-events:none;filter:drop-shadow(0 0 1px rgba(0,0,0,.45))}
+.play{position:absolute;left:50%;top:50%;width:3.5rem;height:3.5rem;margin:-1.75rem 0 0 -1.75rem;border-radius:50%;background:rgba(20,12,15,.62);z-index:1}
+.play::before{content:"";position:absolute;left:50%;top:50%;border:solid transparent;border-width:.6rem 0 .6rem 1rem;border-left-color:#fff;transform:translate(-35%,-50%)}
+.cap{font-size:.92rem}
+#lb{width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:0;border:0;background:transparent;color:#fff}#lb::backdrop{background:rgba(14,8,10,.94)}
+.lbx{position:relative;height:100%;display:grid;grid-template-rows:minmax(0,1fr) auto;gap:.75rem;padding:calc(env(safe-area-inset-top,0px) + 3.75rem) max(1rem,env(safe-area-inset-right,0px)) max(1rem,env(safe-area-inset-bottom,0px)) max(1rem,env(safe-area-inset-left,0px))}
+.stage{display:flex;align-items:center;justify-content:center;min-height:0;min-width:0}.stage img,.stage video{max-width:100%;max-height:100%;object-fit:contain;border-radius:2px}
+.lbb{position:absolute;width:2.9rem;height:2.9rem;border-radius:50%;border:0;background:rgba(255,255,255,.14);color:#fff;font:400 1.7rem/1 var(--body);cursor:pointer;display:grid;place-items:center;z-index:2}.lbb:hover{background:rgba(255,255,255,.26)}.lbb:focus-visible{outline:3px solid #fff;outline-offset:2px}
+#x{top:calc(env(safe-area-inset-top,0px) + .75rem);right:max(.75rem,env(safe-area-inset-right,0px))}#pv,#nx{top:50%;margin-top:-1.45rem}#pv{left:max(.5rem,env(safe-area-inset-left,0px))}#nx{right:max(.5rem,env(safe-area-inset-right,0px))}
+.lbc{display:flex;justify-content:space-between;gap:1rem;font-size:.95rem;color:rgba(255,255,255,.85);min-height:1.5em}#ct{white-space:nowrap;font-variant-numeric:tabular-nums}
+.counts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:1.75rem}
+.count{display:flex;flex-direction:column;gap:.15rem;padding:.25rem 0 .25rem clamp(1rem,3vw,2rem);border-left:2px dashed var(--accent);min-width:0}.count:first-child{border:0;padding-left:0}
+.count b{font:400 clamp(2.4rem,6vw,3.75rem)/1 var(--display);font-variant-numeric:tabular-nums}.count span{color:var(--muted);font-size:.95rem}
+.tool{margin-top:2rem;display:flex;flex-wrap:wrap;gap:1.25rem 2rem;align-items:flex-end;padding:1.25rem 1.5rem;background:var(--surface);border:1px solid var(--line);border-radius:6px}
+.field{display:flex;flex-direction:column;gap:.4rem}label,dt, .lab{font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+input{font:inherit;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:.55rem .75rem;min-width:11rem;max-width:100%}
+.result{flex:1 1 16rem;min-width:0;display:flex;flex-direction:column;gap:.2rem}#rm{font-weight:600}#rsub{color:var(--muted)}.since{font:400 clamp(2rem,5vw,3rem)/1 var(--display);font-variant-numeric:tabular-nums}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:clamp(2rem,6vw,5rem);align-items:start}
+.story{list-style:none;margin:0;padding:0 0 0 2.25rem;position:relative;display:flex;flex-direction:column;gap:2.25rem}
+.story::before{content:"";position:absolute;left:.45rem;top:.6rem;bottom:.6rem;width:2px;background:repeating-linear-gradient(to bottom,var(--accent) 0 9px,transparent 9px 16px)}
+.story li{position:relative;display:flex;flex-direction:column;gap:.4rem;min-width:0}
+.story li::before{content:"";position:absolute;left:calc(-1.8rem - 5px);top:.6rem;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px var(--bg)}.story p{max-width:38rem;color:var(--muted)}
+.rb{margin-top:1.75rem;border-block:2px dashed var(--accent);padding-block:clamp(1.75rem,5vw,3rem);display:flex;flex-direction:column;gap:1.5rem}
+#rc{color:var(--muted);font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-variant-numeric:tabular-nums}
+#rs{font:400 clamp(1.7rem,4.6vw,3rem)/1.15 var(--display);max-width:22em;min-height:3.45em;text-wrap:balance}.swap{animation:rise .35s ease}@keyframes rise{from{opacity:0;transform:translateY(.4rem)}}
+.btn{align-self:flex-start;font:inherit;font-weight:600;background:var(--accent);color:var(--on);border:0;border-radius:4px;padding:.8rem 1.4rem;cursor:pointer}.btn:hover{filter:brightness(1.12)}
+.trads{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2rem 1.5rem;margin:1.75rem 0 0}
+.trad{border-top:2px dashed var(--accent);padding-top:1rem;display:flex;flex-direction:column;gap:.5rem;min-width:0}.trad dd{margin:0}
+.what{font:400 1.9rem/1.1 var(--display);display:flex;align-items:center;gap:.6rem}.sw{width:.95rem;height:.95rem;border-radius:50%;flex:none;box-shadow:inset 0 0 0 1px var(--line)}.why{color:var(--muted);font-size:.98rem}
+.closing{display:flex;flex-direction:column;gap:1.25rem;max-width:44rem}.closing h2{font-size:clamp(2.6rem,7vw,5rem)}.closing p{font-size:1.15rem}.closing p.sign{font:1.4rem var(--display);color:var(--accent)}
+@media(max-width:960px){.trads{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.gallery{--row:14rem;gap:.9rem}.hero,.split,.counts{grid-template-columns:minmax(0,1fr)}.numeral{order:-1;max-width:9.5rem;justify-self:start}.count{flex-direction:row;align-items:baseline;gap:1rem;border:0;border-top:2px dashed var(--accent);padding:.9rem 0}.count:first-child{border-top:0;padding-top:0}}
+@media(max-width:520px){.trads{grid-template-columns:minmax(0,1fr)}}
+@media(prefers-reduced-motion:reduce){.swap{animation:none}.media img,.media video{transition:none}}
+</style></head><body>
+<div class="wrap">
+<header class="hero"><div class="ht"><p class="eyebrow">Second anniversary &middot; The cotton year</p><h1>Two years of us.</h1><p class="lead">a small page for us and my favorite pictures and videos of us mwhehe</p></div>
+<svg class="numeral" viewBox="0 0 260 340" aria-hidden="true" focusable="false"><text x="130" y="300" text-anchor="middle">2</text></svg></header>
+
+<section aria-labelledby="m"><div class="gh"><div class="sh"><h2 id="m">Our moments</h2><p>Two years, many pictures and even more memories</p></div>
+<div class="filters" id="f" role="group" aria-label="Show" hidden><button type="button" data-f="all" aria-pressed="true">All <span id="n1"></span></button><button type="button" data-f="image" aria-pressed="false">Photos <span id="n2"></span></button><button type="button" data-f="video" aria-pressed="false">Videos <span id="n3"></span></button></div></div>
+<div class="gallery" id="g"></div></section>
+
+<dialog id="lb" aria-label="Photo and video viewer"><div class="lbx"><button class="lbb" id="x" type="button" aria-label="Close">&times;</button><button class="lbb" id="pv" type="button" aria-label="Previous">&lsaquo;</button><div class="stage" id="st"></div><button class="lbb" id="nx" type="button" aria-label="Next">&rsaquo;</button><div class="lbc"><p id="lt"></p><p id="ct"></p></div></div></dialog>
+
+<section aria-labelledby="c"><div class="sh"><h2 id="c">Two years, counted</h2><p></p></div>
+<div class="counts"><div class="count"><b>24</b><span>months</span></div><div class="count"><b>104</b><span>weeks</span></div><div class="count"><b>17,520</b><span>hours, about</span></div></div>
+<div class="tool"><div class="field"><span class="lab">The day we started</span><b class="since" id="since"></b></div><div class="result" aria-live="polite"><p id="rm"></p><p id="rsub"></p></div></div></section>
+
+<section class="split" aria-labelledby="s"><div class="sh"><h2 id="s">The story so far</h2><p>How it went, in the order it happened.</p></div>
+<ol class="story">
+<li><h3>The beginning</h3><p>It started small, the way good things do. A message, a coffee, a long walk home. Nobody planned for it to become this.</p></li>
+<li><h3>The first time I knew</h3><p>Somewhere in those first months there was a quiet, ordinary moment when it stopped being a maybe.</p></li>
+<li><h3>Learning each other</h3><p>The small things piled up: how you take your coffee, which songs you skip, what your silence means after a long day.</p></li>
+<li><h3>The hard weeks</h3><p>Not every week was easy. We got through those too, and we came out better at talking to each other.</p></li>
+<li><h3>Year two</h3><p>Less to prove and more to enjoy. The plans got bigger, the evenings got slower, and home started to mean a person.</p></li>
+</ol></section>
+
+<section aria-labelledby="r"><div class="sh"><h2 id="r">A few of the reasons</h2><p>There are more than twelve. These are the ones I could write down.</p></div>
+<div class="rb"><p id="rc"></p><p id="rs" aria-live="polite"></p><button class="btn" id="nr" type="button">Next reason</button></div></section>
+
+<section aria-labelledby="w"><div class="sh"><h2 id="w">What year two is made of</h2><p>Every anniversary year has its own gift, stone and flower. The second belongs to cotton.</p></div>
+<dl class="trads">
+<div class="trad"><dt>Traditional gift</dt><dd class="what"><span class="sw" style="background:#F5F3EE"></span>Cotton</dd><dd class="why">Soft and everyday, and stronger once the threads are woven together.</dd></div>
+<div class="trad"><dt>Modern gift</dt><dd class="what"><span class="sw" style="background:#BFD0E3"></span>China</dd><dd class="why">Beautiful and breakable, so it gets handled with care.</dd></div>
+<div class="trad"><dt>Gemstone</dt><dd class="what"><span class="sw" style="background:#7E1428"></span>Garnet</dd><dd class="why">Deep red, and said to stand for loyalty and commitment.</dd></div>
+<div class="trad"><dt>Flower</dt><dd class="what"><span class="sw" style="background:#D8588A"></span>Cosmos</dd><dd class="why">A flower of harmony that returns to the garden year after year.</dd></div>
+</dl></section>
+
+<section class="closing" aria-labelledby="y"><h2 id="y">Here&rsquo;s to year three.</h2><p>Thank you for the last two. I love you, and I am looking forward to every ordinary day we get next.</p><p class="sign">Happy anniversary.</p></section>
+</div>
+<script>
+(function(){
+/* ===== EDIT HERE: photos and videos, in the order they appear (r = width divided by height) ===== */
+var MEDIA=[
+{type:'image',src:'photos/01-a-rose-in-the-hair.jpg',r:0.75,caption:"nu sto ona gjeda bonjo"},
+{type:'image',src:'photos/02-caught-mid-smile.jpg',r:0.5627,caption:"SMAJL NIGGA"},
+{type:'image',src:'photos/03-the-doll-aisle-detour.jpg',r:0.75,caption:"gledam barbike....."},
+{type:'video',src:'videos/04-a-few-seconds-of-us.mp4',poster:'videos/04-a-few-seconds-of-us-poster.jpg',r:0.5634,caption:"Cooking together only works if..."},
+{type:'image',src:'photos/05-mood-exactly.jpg',r:0.5627,caption:"Mood, exactly"},
+{type:'image',src:'photos/06-floor-cap-big-smile.jpg',r:0.75,caption:"nova godina mwhehhe"},
+{type:'image',src:'photos/07-carried-mirror-and-all.jpg',r:0.5627,caption:"vide se gaćice ali tako i treba "},
+{type:'image',src:'photos/08-leaning-in.jpg',r:0.75,caption:"rosie"},
+{type:'image',src:'photos/09-home-is-a-shoulder.jpg',r:0.5627,caption:"Home is a shoulder"},
+{type:'image',src:'photos/10-quiet-corner.jpg',r:0.75,caption:"yk that rat..eh"},
+{type:'video',src:'videos/11-another-moment-in-motion.mp4',poster:'videos/11-another-moment-in-motion-poster.jpg',r:0.5625,caption:"luka heh"},
+{type:'image',src:'photos/12-silly-mode.jpg',r:0.5622,caption:"Silly mode"},
+{type:'image',src:'photos/13-hunting-for-little-treasures.jpg',r:0.5627,caption:"Hunting for little treasures"},
+{type:'image',src:'photos/14-closer.jpg',r:0.75,caption:"you got games on ur phone ???"},
+{type:'image',src:'photos/15-hiding-behind-the-phone.jpg',r:0.5627,caption:"beb"},
+{type:'image',src:'photos/16-i-lob-u-in-writing.jpg',r:2.2874,caption:"i lob u, doblo"},
+{type:'image',src:'photos/17-sleepy-hours.jpg',r:0.9457,caption:"forever eepy"},
+{type:'image',src:'photos/18-asleep-cat-on-guard.jpg',r:0.7507,caption:"what i come home to"},
+{type:'image',src:'photos/19-up-close.jpg',r:0.5622,caption:"Up close"},
+{type:'image',src:'photos/20-kisses-on-camera.jpg',r:0.5627,caption:"OUCH"},
+/*ADD-MEDIA*/];
+/* ===== EDIT HERE: the reasons ===== */
+var REASONS=['You make ordinary Tuesdays feel like plans.','You listen to the whole story, even the long version.','You are the first person I want to tell things to.','You laugh at my worst jokes and mean it.','You are kind when no one is watching.','Silence with you is comfortable.','You make me braver than I would be alone.','You remember the small things I mention once.','You are patient with me on bad days.','Home feels like wherever you are.','You make me want to be better, and you never make me feel I have to.','I would choose you again, tomorrow and every year after.'];
+/* ===== end of editable content ===== */
+var $=function(i){return document.getElementById(i)},g=$('g'),fl=$('f'),bx=$('lb'),st=$('st'),shown=[],pos=0,flt='all',sx=null;
+function el(t,c){var e=document.createElement(t);if(c)e.className=c;return e}
+function build(){g.textContent='';shown=MEDIA.filter(function(m){return flt=='all'||m.type==flt});
+shown.forEach(function(m,i){var f=el('figure','tile'),b=el('button','media');f.style.setProperty('--r',m.r||1.5);b.type='button';b.setAttribute('aria-label',(m.type=='video'?'Play video':'Open photo')+(m.caption?': '+m.caption:''));
+if(m.type=='video'){var v=el('video');v.muted=true;v.playsInline=true;v.preload='metadata';if(m.poster)v.poster=m.poster;v.src=m.src+'#t=0.1';b.appendChild(v);b.appendChild(el('span','play'))}
+else{var im=el('img');im.src=m.src;im.alt=m.caption||'';im.decoding='async';b.appendChild(im)}
+b.onclick=function(){show(i)};f.appendChild(b);if(m.caption){var c=el('figcaption','cap');c.textContent=m.caption;f.appendChild(c)}g.appendChild(f)})}
+function cur(){var m=shown[pos],n;st.textContent='';
+if(m.type=='video'){n=el('video');n.controls=true;n.playsInline=true;n.autoplay=true;if(m.poster)n.poster=m.poster;n.src=m.src}else{n=el('img');n.src=m.src;n.alt=m.caption||''}
+st.appendChild(n);$('lt').textContent=m.caption||'';$('ct').textContent=(pos+1)+' of '+shown.length;$('pv').hidden=$('nx').hidden=shown.length<2}
+function show(i){pos=i;cur();if(!bx.open){if(bx.showModal)bx.showModal();else bx.setAttribute('open','')}}
+function step(d){pos=(pos+d+shown.length)%shown.length;cur()}
+function shut(){if(bx.close)bx.close();else bx.removeAttribute('open');st.textContent=''}
+$('pv').onclick=function(){step(-1)};$('nx').onclick=function(){step(1)};$('x').onclick=shut;
+bx.addEventListener('close',function(){st.textContent=''});
+bx.addEventListener('click',function(e){if(e.target===bx||e.target===st||e.target.className=='lbx')shut()});
+bx.addEventListener('keydown',function(e){if(shown.length<2)return;if(e.key=='ArrowLeft')step(-1);if(e.key=='ArrowRight')step(1)});
+st.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});
+st.addEventListener('touchend',function(e){if(sx===null||shown.length<2)return;var d=e.changedTouches[0].clientX-sx;sx=null;if(Math.abs(d)>50)step(d>0?-1:1)});
+var ni=MEDIA.filter(function(m){return m.type=='image'}).length,nv=MEDIA.length-ni;
+if(ni&&nv){fl.hidden=false;$('n1').textContent=MEDIA.length;$('n2').textContent=ni;$('n3').textContent=nv;
+fl.querySelectorAll('button').forEach(function(b){b.onclick=function(){flt=b.dataset.f;fl.querySelectorAll('button').forEach(function(o){o.setAttribute('aria-pressed',o===b)});build()}})}
+build();
+var ri=0,re=$('rs'),rc=$('rc');
+function rr(a){re.textContent=REASONS[ri];rc.textContent='Reason '+(ri+1)+' of '+REASONS.length;if(a){re.classList.remove('swap');void re.offsetWidth;re.classList.add('swap')}}
+$('nr').onclick=function(){ri=(ri+1)%REASONS.length;rr(1)};rr(0);
+/* ===== EDIT HERE: the day you started (day, month, year) ===== */
+var START={d:6,m:11,y:2024};
+/* ===== end ===== */
+var mn=$('rm'),sb=$('rsub'),now=new Date(),td=Date.UTC(now.getFullYear(),now.getMonth(),now.getDate());
+$('since').textContent=START.d+'.'+START.m+'.'+START.y;
+var mo=START.m-1,d0=START.d,days=Math.round((td-Date.UTC(START.y,mo,d0))/864e5);
+if(days>0){mn.textContent='Together for '+days.toLocaleString('en-US')+' days, about '+(days*24).toLocaleString('en-US')+' hours.';
+var nx=Date.UTC(now.getFullYear(),mo,d0);if(nx<td)nx=Date.UTC(now.getFullYear()+1,mo,d0);var left=Math.round((nx-td)/864e5);
+sb.textContent=left?'Next anniversary in '+left+(left==1?' day.':' days.'):'Today is our anniversary.'}
+else if(days==0)mn.textContent='Day one. Welcome to it.';
+})();
+</script>
+</body></html>
